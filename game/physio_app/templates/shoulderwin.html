@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game with Video Background</title>
+</head>
+<body>
+    <!-- <h1>Snake Game with Video Background</h1> -->
+    <h1>Shoulder Exercise</h1>
+    <form method="post" action="{% url 'shoulder_exercise_data' %}">
+        {% csrf_token %}
+        <label for="age">Enter your age:</label>
+        <input type="number" name="age" required>
+        
+        <label for="shoulder_injury_history">Do you have a shoulder injury history?</label>
+        <select name="shoulder_injury_history">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+    
+        <button type="submit">Submit</button>
+    </form>
+     
+    <input type="button" value="Start Exercise" onclick="StartCamera()">
+<div id="video-container">
+    <img src="" id="video-feed"
+    width="500" height="500" />
+</div>
+    <script>
+        function StartCamera(){
+            let videoContainer = document.getElementById('video-container');
+                            let videoElement = document.getElementById('video-feed');
+                        
+
+                            videoElement.src = "{% url 'shoulder_ex' %}";
+        }
+    </script>
+</body>
+</html>
