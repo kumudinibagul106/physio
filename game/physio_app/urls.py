@@ -20,6 +20,7 @@ urlpatterns = [
     path('chat', views.chat, name='chat'),
     path('physio_category/head_game_1', views.head_game_1),
     path('physio_category/shoulder_game_1', views.shoulder_game_1),
+    path('physio_category/shoulder_game_2', views.shoulder_game_2),
     path('physio_category/shoulder_ex/', views.shoulder_ex, name='shoulder_ex'),
     path('physio_category/shoulder_exercise_data/', views.shoulder_exercise_data, name='shoulder_exercise_data'),
     path('physio_category/shoulderwin', views.shoulderwin),

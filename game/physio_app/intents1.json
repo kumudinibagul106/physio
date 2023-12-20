@@ -13,12 +13,12 @@
             {
              "tag":"que1",
              "patterns": ["a", "neck injury"],
-             "responses":["The game 'FLAPPY BIRD', which lies under the <b> Head category <b>, is something you are expected to play. "]
+             "responses":["The game 'FLAPPY BIRD', which lies under the <b> Head category <b>, is something you are expected to play. <br> Here You can play game <br> <a href='physio_category/head_game_1 '><button type='submit' style='color: #0645AD;''>Click to play</button></a>"]
             },
             {
                 "tag":"que1",
                 "patterns": ["b", "shoulder injury"],
-                "responses":["The game 'PING PONG', which lies under the general wellness category, is something you are expected to play."]
+                "responses":["The game 'PING PONG', which lies under the general wellness category, is something you are expected to play.<br> <br> <b> Here You can play game </b> <br> <a href='physio_category/shoulder_game_2 '><button type='submit' style='color: #0645AD;''>Click to play</button></a>"]
                },
                {
                 "tag":"que1",

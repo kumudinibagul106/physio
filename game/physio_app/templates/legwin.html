@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game with Video Background</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>leg movement game</title>
+  </head>
+
+  <body>
     <form method="post" action="{% url 'leg_exercise_data' %}">
-        {% csrf_token %}
-        <label for="age">Enter your age:</label>
-        <input type="number" name="age" required>
-        
-        <label for="leg_injury_history">Do you have a leg injury history?</label>
-        <select name="leg_injury_history">
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-        </select>
-    
-        <button type="submit">Submit</button>
+      {% csrf_token %}
+      <label for="age">Enter your age:</label>
+      <input type="number" name="age" required />
+
+      <label for="leg_injury_history">Do you have a leg injury history?</label>
+      <select name="leg_injury_history">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <button type="submit">Submit</button>
     </form>
-     
+
     <!-- <h1>Snake Game with Video Background</h1> -->
     <h1>Leg Exercise</h1>
     <p>{{age}}</p>
     <p>{{injury}}</p>
-    <input type="button" value="Start Exercise" onclick="StartCamera()">
-<div id="video-container">
-    <img src="" id="video-feed"
-    width="500" height="500" />
-</div>
+    <input type="button" value="Start Exercise" onclick="StartCamera()" />
+    <div id="video-container">
+      <img src="" id="video-feed" width="500" height="500" />
+    </div>
     <script>
-        function StartCamera(){
-            let videoContainer = document.getElementById('video-container');
-                            let videoElement = document.getElementById('video-feed');
-                            videoElement.src = "{% url 'leg_ex' %}";
-        }
+      function StartCamera() {
+        let videoContainer = document.getElementById("video-container");
+        let videoElement = document.getElementById("video-feed");
+        videoElement.src = "{% url 'leg_ex' %}";
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -9,6 +9,7 @@ import random
 import os
 import physio_app.flappygames  as game1
 import physio_app.shoulder as game2
+import physio_app.ping_pong as game3
 
 import physio_app.newshoulder  as shoulder
 import physio_app.leg  as leg
@@ -155,6 +156,10 @@ def head_game_1(request):
 
 def shoulder_game_1(request):
     game2.run_game()
+    return render(request, 'cardiac_game.html')
+
+def shoulder_game_2(request):
+    game3.run_game()
     return render(request, 'cardiac_game.html')
 
 def shoulder_exercise_data(request):
